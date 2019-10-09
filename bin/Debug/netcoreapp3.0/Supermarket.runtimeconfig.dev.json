@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\AI-Shref\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\AI-Shref\\.nuget\\packages"
+    ]
+  }
+}

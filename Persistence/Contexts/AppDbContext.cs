@@ -3,7 +3,7 @@ using Supermarket.API.Domain.Models;
 
 namespace Supermarket.API.Persistance.Contexts
 {
-    public AppDbContext : DbContext{
+    public class AppDbContext : DbContext{
         
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
