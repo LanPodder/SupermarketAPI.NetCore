@@ -29,5 +29,9 @@ namespace Supermarket.API.Persistence.Repositories
         public void Update(Category category){
             context.Categories.Update(category);
         }
+
+        public void Remove(Category category){
+            context.Categories.Remove(category);
+        }
     }
 }
