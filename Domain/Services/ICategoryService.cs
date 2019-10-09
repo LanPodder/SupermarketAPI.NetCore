@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Supermarket.API.Domain.Models;
+using Supermarket.API.Domain.Services.Communication;
 
 namespace Supermarket.API.Domain.Services
 {
@@ -8,5 +9,6 @@ namespace Supermarket.API.Domain.Services
     {
         
         Task<IEnumerable<Category>> ListAsync();
+        Task<SaveCategoryResponse> SaveAsync(Category category);
     }
 }
