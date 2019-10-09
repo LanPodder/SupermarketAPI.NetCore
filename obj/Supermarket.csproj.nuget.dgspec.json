@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket\\Supermarket.csproj": {}
+    "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket.API\\Supermarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket\\Supermarket.csproj": {
+    "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket.API\\Supermarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket\\Supermarket.csproj",
+        "projectUniqueName": "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket.API\\Supermarket.csproj",
         "projectName": "Supermarket",
-        "projectPath": "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket\\Supermarket.csproj",
+        "projectPath": "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket.API\\Supermarket.csproj",
         "packagesPath": "C:\\Users\\AI-Shref\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket\\obj\\",
+        "outputPath": "C:\\Users\\AI-Shref\\Desktop\\VS Code Workspace\\Net Core Projects\\Supermarket.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AI-Shref\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
