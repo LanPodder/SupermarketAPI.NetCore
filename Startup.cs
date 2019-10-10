@@ -17,7 +17,6 @@ using Supermarket.API.Domain.Repositories;
 using Supermarket.API.Domain.Services;
 using Supermarket.API.Services;
 using Supermarket.API.Persistance.Repositories;
-
 namespace Supermarket
 {
     public class Startup

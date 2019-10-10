@@ -30,5 +30,22 @@ namespace Supermarket.API.Controllers
             var resources = mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
             return resources;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> PostAsync([FromBody] SaveProductResource resource){
+            if(!ModelState.IsValid){
+                return BadRequest(ModelState.GetErrorMessages());
+            }
+
+            var product = mapper.Map<SaveProductResource, Product>(resource);
+            var result = await productService.SaveAsync(product);
+
+            if(!result.Success){
+                return BadRequest(result.Message);
+            }
+            var productResource = mapper.Map<Product, SaveProductResource>(result.Product);
+
+            return Ok(productResource);
+        }
     }
 }
