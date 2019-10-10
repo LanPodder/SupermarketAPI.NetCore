@@ -23,6 +23,10 @@ namespace Supermarket.API.Services
         }
 
         public async Task<ProductResponse> SaveAsync(Product product){
+            var existingCategory = await productRepository.FindCategoryByIdAsync(product.CategoryId);
+            if(existingCategory == null){
+                return new ProductResponse("Category not found");
+            }
             try{
                 await productRepository.AddAsync(product);
                 await unitOfWork.CompleteAsync();

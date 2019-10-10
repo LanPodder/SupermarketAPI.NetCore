@@ -43,7 +43,7 @@ namespace Supermarket.API.Controllers
             if(!result.Success){
                 return BadRequest(result.Message);
             }
-            var productResource = mapper.Map<Product, SaveProductResource>(result.Product);
+            var productResource = mapper.Map<Product, ProductResource>(result.Product);
 
             return Ok(productResource);
         }
