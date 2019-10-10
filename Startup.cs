@@ -16,7 +16,7 @@ using Supermarket.API.Persistance.Contexts;
 using Supermarket.API.Domain.Repositories;
 using Supermarket.API.Domain.Services;
 using Supermarket.API.Services;
-using Supermarket.API.Persistence.Repositories;
+using Supermarket.API.Persistance.Repositories;
 
 namespace Supermarket
 {
@@ -35,9 +35,15 @@ namespace Supermarket
             services.AddDbContext<AppDbContext>(options =>{
                 options.UseInMemoryDatabase("supermarket-api-in-memory");
             });
+
             services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
         }

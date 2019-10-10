@@ -7,7 +7,7 @@ using Supermarket.API.Domain.Repositories;
 using Supermarket.API.Persistance.Contexts;
 using Supermarket.API.Persistance.Repositories;
 
-namespace Supermarket.API.Persistence.Repositories
+namespace Supermarket.API.Persistance.Repositories
 {
     public class CategoryRepository : BaseRepository, ICategoryRepository
     {
